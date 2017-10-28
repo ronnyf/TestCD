@@ -14,7 +14,10 @@
 		E3AE834D1F92FE5400B2DA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AE834B1F92FE5400B2DA3E /* Main.storyboard */; };
 		E3AE834F1F92FE5400B2DA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3AE834E1F92FE5400B2DA3E /* Assets.xcassets */; };
 		E3AE83521F92FE5400B2DA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AE83501F92FE5400B2DA3E /* LaunchScreen.storyboard */; };
-		E3EF846E1FA41B4800BF502D /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF846C1FA41B4800BF502D /* leveldb-library.framework */; };
+		E3BDB5451FA423260000DFD5 /* leveldb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BDB5441FA423260000DFD5 /* leveldb.framework */; };
+		E3BDB5491FA424CA0000DFD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3BDB5481FA424CA0000DFD5 /* GoogleService-Info.plist */; };
+		E3BDB5661FA428580000DFD5 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDB5641FA428580000DFD5 /* Event+CoreDataClass.swift */; };
+		E3BDB5671FA428580000DFD5 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDB5651FA428580000DFD5 /* Event+CoreDataProperties.swift */; };
 		E3EF846F1FA41B4800BF502D /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */; };
 		E3EF847B1FA41C7A00BF502D /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF847A1FA41C7A00BF502D /* FirebaseCore.framework */; };
 		E3EF847C1FA41CB700BF502D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF84721FA41BBD00BF502D /* libc++.tbd */; };
@@ -46,12 +49,17 @@
 		E3AE834E1F92FE5400B2DA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3AE83511F92FE5400B2DA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3AE83531F92FE5400B2DA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BDB5441FA423260000DFD5 /* leveldb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = leveldb.framework; sourceTree = "<group>"; };
+		E3BDB5481FA424CA0000DFD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3BDB54E1FA425B00000DFD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E3BDB54F1FA425BB0000DFD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E3BDB5641FA428580000DFD5 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E3BDB5651FA428580000DFD5 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E3E904CC1FA37D4900ED8EAC /* TestCD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCD-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3E904D71FA3805800ED8EAC /* LevelDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDB.h; sourceTree = "<group>"; };
 		E3E904D81FA3805800ED8EAC /* LevelDB.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelDB.mm; sourceTree = "<group>"; };
 		E3EF84661FA41A9300BF502D /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		E3EF84671FA41A9D00BF502D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		E3EF846C1FA41B4800BF502D /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
 		E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
 		E3EF84701FA41BB400BF502D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E3EF84721FA41BBD00BF502D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -64,11 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BDB5451FA423260000DFD5 /* leveldb.framework in Frameworks */,
 				E3EF847E1FA41CE400BF502D /* libz.tbd in Frameworks */,
 				E3EF847D1FA41CDD00BF502D /* libicucore.tbd in Frameworks */,
 				E3EF847C1FA41CB700BF502D /* libc++.tbd in Frameworks */,
 				E3EF847B1FA41C7A00BF502D /* FirebaseCore.framework in Frameworks */,
-				E3EF846E1FA41B4800BF502D /* leveldb-library.framework in Frameworks */,
 				E3EF846F1FA41B4800BF502D /* FirebaseDatabase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +104,8 @@
 		E3AE83411F92FE5400B2DA3E /* TestCD */ = {
 			isa = PBXGroup;
 			children = (
+				E3BDB5641FA428580000DFD5 /* Event+CoreDataClass.swift */,
+				E3BDB5651FA428580000DFD5 /* Event+CoreDataProperties.swift */,
 				E3AE83421F92FE5400B2DA3E /* AppDelegate.swift */,
 				E3AE83471F92FE5400B2DA3E /* MasterViewController.swift */,
 				E3AE83491F92FE5400B2DA3E /* DetailViewController.swift */,
@@ -109,6 +119,7 @@
 				E3E904D81FA3805800ED8EAC /* LevelDB.mm */,
 				E3EF84661FA41A9300BF502D /* Firebase.h */,
 				E3EF84671FA41A9D00BF502D /* module.modulemap */,
+				E3BDB5481FA424CA0000DFD5 /* GoogleService-Info.plist */,
 			);
 			path = TestCD;
 			sourceTree = "<group>";
@@ -116,12 +127,14 @@
 		E3DFC88B1FA3967700B21F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3BDB54F1FA425BB0000DFD5 /* UIKit.framework */,
+				E3BDB54E1FA425B00000DFD5 /* CoreData.framework */,
+				E3BDB5441FA423260000DFD5 /* leveldb.framework */,
 				E3EF847A1FA41C7A00BF502D /* FirebaseCore.framework */,
 				E3EF84741FA41C0E00BF502D /* libicucore.tbd */,
 				E3EF84721FA41BBD00BF502D /* libc++.tbd */,
 				E3EF84701FA41BB400BF502D /* libz.tbd */,
 				E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */,
-				E3EF846C1FA41B4800BF502D /* leveldb-library.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +202,7 @@
 			files = (
 				E3AE83521F92FE5400B2DA3E /* LaunchScreen.storyboard in Resources */,
 				E3AE834F1F92FE5400B2DA3E /* Assets.xcassets in Resources */,
+				E3BDB5491FA424CA0000DFD5 /* GoogleService-Info.plist in Resources */,
 				E3AE834D1F92FE5400B2DA3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +217,9 @@
 				E3AE83461F92FE5400B2DA3E /* TestCD.xcdatamodeld in Sources */,
 				E3AE83431F92FE5400B2DA3E /* AppDelegate.swift in Sources */,
 				E3AE83481F92FE5400B2DA3E /* MasterViewController.swift in Sources */,
+				E3BDB5671FA428580000DFD5 /* Event+CoreDataProperties.swift in Sources */,
 				E3AE834A1F92FE5400B2DA3E /* DetailViewController.swift in Sources */,
+				E3BDB5661FA428580000DFD5 /* Event+CoreDataClass.swift in Sources */,
 				E3EF847F1FA41DCF00BF502D /* LevelDB.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

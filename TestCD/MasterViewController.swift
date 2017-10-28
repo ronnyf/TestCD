@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 import FirebaseCore
+import FirebaseDatabase
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
+    var handle: UInt?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         navigationItem.leftBarButtonItem = editButtonItem
         
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        
+        handle = Database.database().reference(withPath: "testing").observe(.value) { (snapshot) in
+            guard let dict = snapshot.value as? [String: Any] else { return }
+            debugPrint("DEBUG: got value: \(dict)")
+            self.insertObject(title: dict["key"] as? String)
+        }
+        
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
@@ -48,7 +58,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
              
         // If appropriate, configure the new managed object.
         newEvent.timestamp = Date()
-
+        save(context: context)
+    }
+    
+    private func insertObject(title: String?) {
+        let context = self.fetchedResultsController.managedObjectContext
+        let newEvent = Event(context: context)
+        newEvent.title = title
+        newEvent.timestamp = Date()
+        save(context: context)
+    }
+    
+    private func save(context: NSManagedObjectContext) {
         // Save the context.
         do {
             try context.save()
@@ -114,7 +135,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(_ cell: UITableViewCell, withEvent event: Event) {
-        cell.textLabel!.text = event.timestamp!.description
+        cell.textLabel!.text = event.title
+        cell.detailTextLabel?.text = event.timestamp?.description
     }
 
     // MARK: - Fetched results controller
