@@ -8,8 +8,8 @@
 
 #import "LevelDB.h"
 
-#import <leveldb/db.h>
-#import <leveldb/options.h>
+#import "leveldb/db.h"
+#import "leveldb/options.h"
 
 @implementation LevelDB
 

@@ -14,8 +14,12 @@
 		E3AE834D1F92FE5400B2DA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AE834B1F92FE5400B2DA3E /* Main.storyboard */; };
 		E3AE834F1F92FE5400B2DA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3AE834E1F92FE5400B2DA3E /* Assets.xcassets */; };
 		E3AE83521F92FE5400B2DA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AE83501F92FE5400B2DA3E /* LaunchScreen.storyboard */; };
-		E3DFC88F1FA396A900B21F82 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DFC88E1FA396A900B21F82 /* leveldb-library.framework */; };
-		E3E904D91FA3805800ED8EAC /* LevelDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3E904D81FA3805800ED8EAC /* LevelDB.mm */; };
+		E3EF846E1FA41B4800BF502D /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF846C1FA41B4800BF502D /* leveldb-library.framework */; };
+		E3EF846F1FA41B4800BF502D /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */; };
+		E3EF847B1FA41C7A00BF502D /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF847A1FA41C7A00BF502D /* FirebaseCore.framework */; };
+		E3EF847C1FA41CB700BF502D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF84721FA41BBD00BF502D /* libc++.tbd */; };
+		E3EF847D1FA41CDD00BF502D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF84741FA41C0E00BF502D /* libicucore.tbd */; };
+		E3EF847E1FA41CE400BF502D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF84701FA41BB400BF502D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,10 +45,17 @@
 		E3AE834E1F92FE5400B2DA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3AE83511F92FE5400B2DA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3AE83531F92FE5400B2DA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3DFC88E1FA396A900B21F82 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
 		E3E904CC1FA37D4900ED8EAC /* TestCD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCD-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3E904D71FA3805800ED8EAC /* LevelDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDB.h; sourceTree = "<group>"; };
 		E3E904D81FA3805800ED8EAC /* LevelDB.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelDB.mm; sourceTree = "<group>"; };
+		E3EF84661FA41A9300BF502D /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		E3EF84671FA41A9D00BF502D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E3EF846C1FA41B4800BF502D /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		E3EF84701FA41BB400BF502D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E3EF84721FA41BBD00BF502D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		E3EF84741FA41C0E00BF502D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		E3EF847A1FA41C7A00BF502D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +63,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3DFC88F1FA396A900B21F82 /* leveldb-library.framework in Frameworks */,
+				E3EF847E1FA41CE400BF502D /* libz.tbd in Frameworks */,
+				E3EF847D1FA41CDD00BF502D /* libicucore.tbd in Frameworks */,
+				E3EF847C1FA41CB700BF502D /* libc++.tbd in Frameworks */,
+				E3EF847B1FA41C7A00BF502D /* FirebaseCore.framework in Frameworks */,
+				E3EF846E1FA41B4800BF502D /* leveldb-library.framework in Frameworks */,
+				E3EF846F1FA41B4800BF502D /* FirebaseDatabase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +106,8 @@
 				E3E904CC1FA37D4900ED8EAC /* TestCD-Bridging-Header.h */,
 				E3E904D71FA3805800ED8EAC /* LevelDB.h */,
 				E3E904D81FA3805800ED8EAC /* LevelDB.mm */,
+				E3EF84661FA41A9300BF502D /* Firebase.h */,
+				E3EF84671FA41A9D00BF502D /* module.modulemap */,
 			);
 			path = TestCD;
 			sourceTree = "<group>";
@@ -97,7 +115,12 @@
 		E3DFC88B1FA3967700B21F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3DFC88E1FA396A900B21F82 /* leveldb-library.framework */,
+				E3EF847A1FA41C7A00BF502D /* FirebaseCore.framework */,
+				E3EF84741FA41C0E00BF502D /* libicucore.tbd */,
+				E3EF84721FA41BBD00BF502D /* libc++.tbd */,
+				E3EF84701FA41BB400BF502D /* libz.tbd */,
+				E3EF846D1FA41B4800BF502D /* FirebaseDatabase.framework */,
+				E3EF846C1FA41B4800BF502D /* leveldb-library.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,7 +202,6 @@
 				E3AE83461F92FE5400B2DA3E /* TestCD.xcdatamodeld in Sources */,
 				E3AE83431F92FE5400B2DA3E /* AppDelegate.swift in Sources */,
 				E3AE83481F92FE5400B2DA3E /* MasterViewController.swift in Sources */,
-				E3E904D91FA3805800ED8EAC /* LevelDB.mm in Sources */,
 				E3AE834A1F92FE5400B2DA3E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +348,13 @@
 				);
 				INFOPLIST_FILE = TestCD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rfxsoftware.TestCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/leveldb-library.framework/Headers\"";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestCD/TestCD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -349,9 +375,13 @@
 				);
 				INFOPLIST_FILE = TestCD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rfxsoftware.TestCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/leveldb-library.framework/Headers\"";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestCD/TestCD-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
